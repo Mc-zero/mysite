@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/swiper-3.3.1.min.css">
+    <link rel="stylesheet" href="css/global.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide blue">Slide 1</div>
+                    <div class="swiper-slide yellow">Slide 2</div>
+                    <div class="swiper-slide orange">Slide 3</div>
+                </div>
+            </div>
+        </header>
+    </div>
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script src="js/swiper-3.3.1.jquery.min.js"></script>
+    <script src="js/layout.js"></script>
+    <script>
+    $(document).ready(function() {
+        var mySwiper = new Swiper('.swiper-container', {
+            direction: 'horizontal',
+            loop: true,
+            autoplay: 4000,
+            effect: 'fade'
+        });
+    })
+    </script>
+</body>
+</script>
+</body>
+
+</html>

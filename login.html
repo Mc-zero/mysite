@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/global.css">
+    <style>
+    body {
+        background-image: url("img/pub_1.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: background-image 2s;
+    }
+    
+    .container {}
+    
+    .login-container {
+        width: 80%;
+        height: 30%;
+        background-color: grey;
+        border-radius: 6%;
+        opacity: 0.6;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
+    
+    .login-header {
+        text-align: center;
+        font-size: 1.6rem;
+        letter-spacing: 0.1rem;
+        height:30%;
+        line-height: 1.6rem;
+        text-shadow: 0 1px 1px #333;;
+        padding-top: 4%;
+    }
+
+    .login-main {
+    	height:40%;
+    }
+
+    .login-footer {
+    	height:30%;
+    	text-align: right;
+    	font-size: 1.4rem;
+    	padding-right:10%;
+    	line-height: 1.6rem;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="login-container">
+            <div class="login-header">
+                <div><a href="#">zero's Personal Website</a></div>
+            </div>
+            <div class="login-main"></div>
+            <div class="login-footer">
+            	<a href="">Contract MyWebSite</a>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        var container = $('.container');
+        var logincontainer = $('.login-container');
+        var width = logincontainer.width();
+        var height = logincontainer.height();
+        var pub_img_num = 6;
+
+        logincontainer.css('margin-left', '-' + width / 2 + 'px').css('margin-top', '-' + height / 2 + 'px');
+
+        logincontainer.click(function() {
+            changebg();
+        });
+
+        function changebg() {
+            var randomnumber = Math.floor(Math.random() * pub_img_num + 1);
+            $('body').css({
+                'background-image': 'url(img/pub_' + randomnumber + '.jpg)'
+            });
+        }
+
+
+        changebg();
+
+        var timeInterval = setInterval(changebg, 4000);
+    });
+    </script>
+</body>
+
+</html>

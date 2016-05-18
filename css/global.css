@@ -1,0 +1,50 @@
+html,
+body,
+.container {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    height: 100%;
+    font-family: Georgia, serif;
+}
+
+div,
+h1,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 20%;
+}
+
+.swiper-container,
+.swiper-wrapper {
+    height: 100%;
+}
+
+.swiper-slide {
+    height: 100%;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.orange {
+    background-color: orange;
+}
+
+a {
+    text-decoration: none;
+    color: #fefefe;
+    ;
+}
